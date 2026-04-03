@@ -4,6 +4,9 @@
   box-sizing: border-box;
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --primary-color: #007bff;
   --secondary-color: #6c757d;
@@ -28,7 +31,7 @@ body {
   padding: 10px 20px;
 }
 .nav-logo {
-  color:var(--background-hover);
+  color: var(--background-hover);
   font-size: 24px;
   font-weight: bold;
   animation: fadeIn 3s ease-in-out infinite alternate;
@@ -59,7 +62,7 @@ body {
 }
 .nav-item a:hover {
   color: #000000;
-  background-color:var(--background-hover);
+  background-color: var(--background-hover);
   border-radius: 4px;
 }
 .nav-item a.active {
@@ -82,12 +85,30 @@ body {
   transition: background-color 0.3s ease;
 }
 .nav-btns button:hover {
-  background-color:var(--background-hover);
+  background-color: var(--background-hover);
   color: #fff;
+}
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+.nav-reponsive-menu {
+  display: none;
+}
+.remove-icon {
+  display: none;
+  font-size: 34px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
@@ -99,6 +120,26 @@ body {
   }
   .nav-btns {
     margin-top: 10px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-btns {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .nav-reponsive-menu {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .remove-icon {
+    display: block;
   }
 }
 .hero {
