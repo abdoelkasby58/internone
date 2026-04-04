@@ -8,9 +8,8 @@ removeMenu.addEventListener("click", () => {
   body.classList.remove("noscroll");
   navResponsiveMenu.classList.remove("active");
 });
-navResponsiveMenu.maxHeight = "0px";
 
-function TogggleMenu() {
+function ToggleMenu() {
   if (navResponsiveMenu.style.maxHeight === "0px") {
     body.classList.add("noscroll");
     navResponsiveMenu.style.maxHeight = "100vh";
@@ -20,3 +19,5 @@ function TogggleMenu() {
     body.classList.remove("noscroll");
   }
 }
+
+navResponsiveMenu.style.maxHeight = "0px";
