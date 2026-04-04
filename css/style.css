@@ -18,6 +18,10 @@ body {
   background-color: #f0f0f0;
   font-family: verdana, sans-serif;
 }
+body.noscroll {
+  overflow: hidden;
+  overflow-y: hidden;
+}
 .nav-bar {
   width: 100%;
   background-color: var(--background-color);
@@ -29,6 +33,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  position: sticky;
+  top: 20px;
+  z-index: 100;
 }
 .nav-logo {
   color: var(--background-hover);
@@ -94,9 +101,6 @@ body {
   color: #fff;
   cursor: pointer;
 }
-.nav-reponsive-menu {
-  display: none;
-}
 .remove-icon {
   display: none;
   font-size: 34px;
@@ -106,11 +110,26 @@ body {
   top: 20px;
   right: 20px;
 }
+.nav-reponsive-menu {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--background-color);
+  z-index: 1000;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.nav-reponsive-menu.active {
+  transform: translateX(0);
+}
 @media (max-width: 768px) {
-  .nav-container {
+  /* .nav-container {
     flex-direction: row;
     align-items: center;
-  }
+  } */
 
   .nav-list {
     flex-direction: column;
@@ -130,14 +149,7 @@ body {
   .menu-icon {
     display: block;
   }
-  .nav-reponsive-menu {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
+
   .remove-icon {
     display: block;
   }

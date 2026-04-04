@@ -28,9 +28,9 @@
   </head>
   <body>
     <header class="nav-bar">
-           <div class="nav-reponsive-menu">
-        <div class="remove-icon">
-        <i class="fa-solid fa-xmark" style="color: white;"></i>
+      <div class="nav-reponsive-menu active" id="nav-responsive-menu">
+        <div class="remove-icon" id="remove-menu">
+          <i class="fa-solid fa-xmark" style="color: white"></i>
         </div>
         <ul class="nav-reponsive-list">
           <li class="nav-reponsive-item">
@@ -81,11 +81,10 @@
           <button class="nav-btn">Login</button>
           <button class="nav-btn">Sign Up</button>
         </div>
-        <div class="menu-icon">
+        <div class="menu-icon active" id="menu-icon" onclick="TogggleMenu()">
           <i class="fas fa-bars"></i>
         </div>
       </div>
- 
     </header>
     <header class="hero">
       <div class="hero-content">
