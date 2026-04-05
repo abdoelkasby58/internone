@@ -250,6 +250,7 @@ body.noscroll {
       center center/cover;
   color: #fff;
   padding: 200px 20px;
+  margin-top: 64px;
 }
 .hero-content {
   display: grid;
